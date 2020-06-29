@@ -1,0 +1,8 @@
+node_modules/
+.cache/
+dist/
+coverage/
+.vscode/
+.env
+# Local Netlify folder
+.netlify

@@ -1,0 +1,27 @@
+{
+  "name": "youtube-playlist-sorter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nish17/youtube-playlist-sorter.git"
+  },
+  "keywords": [],
+  "author": "Nimesh Solanki <nimesh3536@gmail.com> (https://www.snimesh.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nish17/youtube-playlist-sorter/issues"
+  },
+  "homepage": "https://github.com/nish17/youtube-playlist-sorter#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "parcel": "^1.12.4"
+  }
+}
