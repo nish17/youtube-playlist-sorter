@@ -1,11 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
+import Login from './Login';
+import Dashboard from './Dashboard';
 
 const App = () => {
   return (
-    <div>
-      <h1>Main App</h1>
-    </div>
+    <section className='main-section' >
+      <div className='container'>
+        <h1 className='main-title'>Let's sort it!</h1>
+
+        <Dashboard />
+        {/* <Login /> */}
+      </div>
+    </section>
   );
 };
 
