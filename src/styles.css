@@ -1,0 +1,26 @@
+body {
+}
+
+.main-section {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title,
+.results-container {
+  font-family: cursive;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
