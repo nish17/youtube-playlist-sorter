@@ -24,3 +24,7 @@ body {
   color: white;
   text-align: center;
 }
+
+.results-container > ul > li {
+  color: white;
+}
