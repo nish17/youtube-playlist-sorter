@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --port 8080",
+    "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/nish17/youtube-playlist-sorter#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-google-login": "^5.1.20"
   },
   "devDependencies": {
     "parcel": "^1.12.4"
