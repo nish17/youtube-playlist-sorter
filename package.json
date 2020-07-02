@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/nish17/youtube-playlist-sorter#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-google-login": "^5.1.20"
+    "react-google-login": "^5.1.20",
+    "url": "^0.11.0"
   },
   "devDependencies": {
     "parcel": "^1.12.4"
