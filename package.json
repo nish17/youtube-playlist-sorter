@@ -29,5 +29,8 @@
   },
   "devDependencies": {
     "parcel": "^1.12.4"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
 }
