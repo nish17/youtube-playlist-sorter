@@ -14,13 +14,15 @@ const Search = ({ submitID }) => {
     <div className='search-bar-container'>
       <div className='row'>
         <div className='col-lg-8'>
-          <div className='input-group'>
+          <div className='input-group input-group-lg'>
             <input
               type='text'
               className='form-control'
+              aria-label='Large'
+              aria-describedby='inputGroup-sizing-sm'
               value={playlistURL}
               onChange={(e) => setURL(e.target.value)}
-              placeholder='Please enter Youtube playlist URL'
+              placeholder='Youtube playlist URL goes here!'
             />
             <span className='input-group-btn'>
               <button
