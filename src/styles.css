@@ -1,35 +1,26 @@
 .main-section {
-  width: 100%;
-  height: 100%;
-  background-color: crimson;
+  width: 100vw;
+  height: 50vh;
+  background-color: rgb(236, 54, 90);
 }
 
 .container {
-  /* margin: 0 auto; */
+  margin: 0 auto;
+  width: 75%;
+  height: 100%;
   position: relative;
+  border: 1px solid violet;
 }
 
-.search-bar-container {
+.main-header {
+  /* border: 1px solid black; */
   position: absolute;
-  top: 120px;
-  /* left: 35em; */
-  width: 100%;
+  top: 15%;
+  left: 30%;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-}
-
-.main-title{
-  /* display: inline; */
-  font-family: 'Mukta', sans-serif;;
+.main-title {
+  font-family: 'Mukta', sans-serif;
   font-size: 100px;
   text-align: center;
   text-shadow: 2px 2px white;
@@ -40,12 +31,92 @@ header {
   height: 100px;
 }
 
+.search-bar-container {
+  position: absolute;
+  top: 48vh;
+  /* left: 25em; */
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .results-container {
-  font-family: cursive;
+  position: absolute;
+
+  width: 100%;
+  top: 120%;
+  font-family: 'Mukta', sans-serif;
+  /* text-align: left; */
   /* font-size: 100px; */
   /* text-align: center; */
 }
 
 .results-container > ul {
   font-size: 30px;
+}
+
+.table > td {
+  display: inline;
+}
+
+.th-sno {
+  width: 10%;
+  text-align: center;
+}
+.th-thumbnail {
+  width: 10%;
+  text-align: center;
+}
+
+.th-title {
+  width: 60%;
+  text-align: center;
+}
+.th-views {
+  width: 10%;
+  text-align: center;
+}
+.th-likes {
+  width: 10%;
+  text-align: center;
+}
+
+.result-table {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+td {
+  height: 50%;
+  width: 50%;
+}
+
+.result-sno {
+  width: 10%;
+  font-size: x-large;
+  justify-self: center;
+  align-self: center;
+}
+.result-thumbnail {
+  width: 10%;
+  font-size: x-large;
+}
+
+.result-title {
+  width: 60%;
+  font-size: x-large;
+}
+.result-views {
+  width: 10%;
+  font-size: x-large;
+}
+.result-likes {
+  width: 10%;
+  font-size: x-large;
 }
