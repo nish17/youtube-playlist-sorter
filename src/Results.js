@@ -1,14 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Results = () => {
-  
-  const [videoIDs, setVideoIDs] = useState([]);
+const abbreviate = require('number-abbreviate');
+
+const Results = ({ videoList }) => {
   const [videos, setVideos] = useState([]);
-  
-  
-  return <div className='results-container'>
-    <h6>Hey! Results will show up over here. Please be patient</h6>
-  </div>;
+
+  function formatVideos() {
+    const formattedVideos = videoList.map((video, index) => {
+      return (
+        <li key={video.id}>
+          <a href={`https://www.youtube.com/watch?v=${video.id}`}>
+            {`${index + 1}. ${video.snippet.title} [👀  ${abbreviate(
+              video.statistics.viewCount,
+              1
+            )} / 👍  ${abbreviate(video.statistics.likeCount, 1)}]`}
+          </a>
+        </li>
+      );
+    });
+    setVideos(formattedVideos);
+  }
+
+  useEffect(() => {
+    formatVideos();
+  }, []);
+
+  return (
+    <div className='results-container'>
+      <h1>Here you go!</h1>
+      <ul>{videos}</ul>
+    </div>
+  );
 };
 
 export default Results;
