@@ -31,7 +31,7 @@ const Results = ({ videoList }) => {
 
   useEffect(() => {
     formatVideos();
-  }, []);
+  }, [videos]);
 
   return (
     <div className='results-container'>
