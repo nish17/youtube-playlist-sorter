@@ -7,7 +7,7 @@ const Results = ({ videoList }) => {
 
   return (
     <div className='results-container'>
-      <table className='table'>
+      <table className='table table-borderless'>
         <thead className='thead-dark'>
           <tr>
             <th scope='col'>#</th>
