@@ -17,7 +17,7 @@ const Dashboard = () => {
         videos.sort(comparatorForLikes);
         setVideos(videos);
       } catch (e) {
-        console.log('something went-wrong', e);
+        console.log('something went-wrong', JSON.stringify(e));
       }
     })();
   }, [playlistID]);
