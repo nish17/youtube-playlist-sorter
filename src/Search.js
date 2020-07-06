@@ -4,10 +4,10 @@ const Search = ({ submitID }) => {
   const [playlistURL, setURL] = useState('');
 
   const handleSubmit = (e) => {
-    console.log(e);
+    console.log('Go button clicked!');
     const playlistID = getPlaylistId(playlistURL);
     console.log('playlistID', playlistID);
-    submitID(playlistID);
+    return submitID(playlistID);
   };
 
   return (
