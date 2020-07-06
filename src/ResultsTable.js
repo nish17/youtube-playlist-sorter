@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ResultsTable = ({
-  key,
+  id,
   url,
   thumbnail,
   serialNo,
@@ -10,7 +10,7 @@ const ResultsTable = ({
   likes,
 }) => {
   return (
-    <tr key={key}>
+    <tr key={id}>
       <th className='result-sno' scope='row'>
         {serialNo}
       </th>
