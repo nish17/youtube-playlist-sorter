@@ -22,7 +22,7 @@ const Dashboard = () => {
     })();
   }, [playlistID]);
   return (
-    <div>
+    <div className='dashboard'>
       <Search submitID={setPlaylistID} />
       {playlistID != '' && videos.length != 0 && <Results videoList={videos} />}
     </div>
