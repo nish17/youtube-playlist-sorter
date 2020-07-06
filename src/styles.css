@@ -19,10 +19,8 @@
 }
 
 .main-header {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 10rem;
+  position: absolute;
+  top: 20%;
 }
 
 .main-title {
@@ -45,8 +43,8 @@
 }
 
 .search-bar-container {
-  position: relative;
-  top: 24%;
+  position: absolute;
+  top: 48%;
   left: 5%;
   width: 90%;
 }
@@ -60,15 +58,9 @@
 
 .results-container {
   position: absolute;
-
   width: 100%;
-  top: 30%;
-  /* margin-top: 30%; */
-  /* top: 100%; */
+  top: 60%;
   font-family: 'Mukta', sans-serif;
-  /* text-align: left; */
-  /* font-size: 100px; */
-  /* text-align: center; */
 }
 
 .results-container > ul {
@@ -84,7 +76,6 @@
   bottom: 0;
   right: 50%;
   font-family: 'Mukta', sans-serif;
-  /* display: flex; */
   color: black;
 }
 
@@ -97,58 +88,37 @@
   color: #a83f39;
 }
 
-/* .result-table {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.result-sno {
-  width: 10%;
-  font-size: x-large;
-  justify-self: center;
-  align-self: center;
-}
-.result-thumbnail {
-  width: 10%;
-  font-size: x-large;
-}
-
-.result-title {
-  width: 60%;
-  font-size: x-large;
-}
-.result-views {
-  width: 10%;
-  font-size: x-large;
-}
-.result-likes {
-  width: 10%;
-  font-size: x-large;
-}
- */
-
 @media only screen and (max-width: 544px) {
   .search-bar-container {
     position: relative;
-    top: 12%;
+    top: 48%;
     left: 5%;
     width: 90%;
   }
+  .main-header {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
 }
 
-@media only screen and (max-width: 324px) {
+@media only screen and (max-width: 320px) {
   .search-bar-container {
     position: relative;
-    top: 0%;
+    top: 48%;
     left: 5%;
     width: 90%;
   }
 
   .main-header {
     display: flex;
+    position: absolute;
+    top: 0%;
     justify-content: center;
     flex-wrap: wrap;
-    /* margin-top: rem; */
+    margin-top: 5%;
   }
 }
