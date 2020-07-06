@@ -64,37 +64,29 @@
   display: inline;
 }
 
-.th-sno {
-  width: 10%;
-  text-align: center;
-}
-.th-thumbnail {
-  width: 10%;
-  text-align: center;
-}
-
-.th-title {
-  width: 60%;
-  text-align: center;
-}
-.th-views {
-  width: 10%;
-  text-align: center;
-}
-.th-likes {
-  width: 10%;
-  text-align: center;
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  font-family: 'Mukta', sans-serif;
+  /* display: flex; */
+  color: black;
 }
 
-.result-table {
+.footer > h5 {
+  font-size: larger;
+}
+
+.footer > .love > .heart {
+  font-size: x-large;
+  color: #a83f39;
+}
+
+
+/* .result-table {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-td {
-  height: 50%;
-  width: 50%;
 }
 
 .result-sno {
@@ -120,3 +112,4 @@ td {
   width: 10%;
   font-size: x-large;
 }
+ */

@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 // import Login from './Login';
 import Dashboard from './Dashboard';
+import Footer from './Footer';
 const App = () => {
   return (
     <section className='main-section'>
@@ -11,6 +12,7 @@ const App = () => {
         </div>
         <Dashboard />
         {/* <Login /> */}
+        {/* <Footer /> */}
       </div>
     </section>
   );
