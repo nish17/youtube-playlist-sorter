@@ -18,9 +18,10 @@ So I thought of building one, on my own.
 ### Screenshots
 
 
-## Credits
+## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
-- [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
+## ❤️ Credits
+
 - [Node.js](https://nodejs.org/)
 - [React.js](https://reactjs.org/)
 - [Netlify](https://www.netlify.com/)
