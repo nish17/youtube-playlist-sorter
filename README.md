@@ -25,3 +25,7 @@ So I thought of building one, on my own.
 - [Node.js](https://nodejs.org/)
 - [React.js](https://reactjs.org/)
 - [Netlify](https://www.netlify.com/)
+
+## 🎓 License
+
+[MIT](LICENSE)
