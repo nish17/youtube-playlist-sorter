@@ -65,19 +65,20 @@ function stableSort(array, comparator) {
     if (order !== 0) return order;
     return a[1] - b[1];
   });
+  console.log('inside stable sort\n post sort array', stabilizedThis);
   return stabilizedThis.map((el) => el[0]);
 }
 
 const headCells = [
-  { id: 'sno', numeric: false, disablePadding: true, label: '#' },
+  { id: 'sno', numeric: true, disablePadding: false, label: '#' },
   {
-    id: 'videoTitle',
+    id: 'videoThumbnail',
     numeric: false,
     disablePadding: true,
     label: 'Video Thumbnail',
   },
   {
-    id: 'videoThumbnail',
+    id: 'videoTitle',
     numeric: false,
     disablePadding: true,
     label: 'Video Title',
@@ -86,8 +87,8 @@ const headCells = [
   { id: 'likes', numeric: true, disablePadding: false, label: 'Likes' },
 ];
 
-function EnhancedTableHead(props) {
-  const { classes, order, orderBy, onRequestSort } = props;
+function EnhancedTableHead({ classes, order, orderBy, onRequestSort }) {
+
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
   };
@@ -124,10 +125,17 @@ function EnhancedTableHead(props) {
 
 const Results = ({ videoList }) => {
   const classes = useStyles();
-  const [order, setOrder] = React.useState('asc');
+  const [order, setOrder] = React.useState('desc');
   const [orderBy, setOrderBy] = React.useState('likes');
 
   const handleRequestSort = (event, property) => {
+    debugger;
+    console.log(
+      "inside handle request sort\n Here's the event",
+      event,
+      "Here's the property: ",
+      property
+    );
     const isAsc = orderBy === property && order === 'asc';
     setOrder(isAsc ? 'desc' : 'asc');
     setOrderBy(property);
