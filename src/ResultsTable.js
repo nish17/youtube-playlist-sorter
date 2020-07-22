@@ -18,7 +18,7 @@ const ResultsTable = ({
         <img src={thumbnail} />
       </td>
       <td className='result-title'>
-        <a href={url}>{title}</a>
+        <a href={url} target='_blank'>{title}</a>
       </td>
       <td className='result-views'>{views}</td>
       <td className='result-likes'>{likes}</td>
