@@ -5,7 +5,7 @@ import ResultsTable from './ResultsTable';
 const Results = ({ videoList }) => {
   // const [videos, setVideos] = useState(videoList);
   const [order, setOrder] = React.useState('desc');
-  const [orderBy, setOrderBy] = React.useState('likes');
+  const [orderBy, setOrderBy] = React.useState('views');
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === 'asc';
@@ -47,10 +47,10 @@ const Results = ({ videoList }) => {
                 Video Title{/* <span>{orderBy==='title'? order==='desc'?' 🔽':' 🔼':''}</span> */}
               </th>
               <th scope='col' onClick={(e) => onSort(e, 'views')}>
-                Views<span>{orderBy==='views'? order==='desc'?' 🔼':' 🔽':''}</span>
+                Views<span>{orderBy==='views'? order==='desc'?' 🔽':' 🔼':''}</span>
               </th>
               <th scope='col' onClick={(e) => onSort(e, 'likes')}>
-                Likes<span>{orderBy==='likes'? order==='desc'?' 🔼':' 🔽':''}</span>
+                Likes<span>{orderBy==='likes'? order==='desc'?' 🔽':' 🔼':''}</span>
               </th>
             </tr>
           </thead>
