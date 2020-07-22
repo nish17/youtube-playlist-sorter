@@ -1,4 +1,6 @@
-# Youtube Playlist Sorter v2
+<h1 align="center"> Youtube Playlist Sorter v2 </h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
 
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
@@ -17,6 +19,7 @@ So I thought of building one, on my own.
 
 ### Screenshots
 
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/1.png"></a>
 
 ## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
