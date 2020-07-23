@@ -17,6 +17,10 @@ There's no such feature on [Youtube](https://youtube.com/) as of now.
 So I thought of building one, on my own.
 
 
+### Demo
+
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo.gif"></a>
+
 ### Screenshots
 
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/1.png"></a>
