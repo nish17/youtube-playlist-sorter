@@ -14,6 +14,7 @@ const App = () => {
         </div>
         <Dashboard />
       </Container>
+      <Footer/>
     </div>
   );
 };
