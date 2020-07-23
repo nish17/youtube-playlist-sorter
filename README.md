@@ -1,7 +1,8 @@
 <h1 align="center"> Youtube Playlist Sorter v2 </h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/jaydp17.svg?style=social)](https://twitter.com/jaydp17)
+[![Twitter Follow](https://img.shields.io/twitter/follow/NimeshS17.svg?style=social)](https://twitter.com/NimeshS17)
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
 A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
