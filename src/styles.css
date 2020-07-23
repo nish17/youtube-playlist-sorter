@@ -63,6 +63,7 @@
   top: 60%;
   font-family: 'Mukta', sans-serif;
   font-size: xx-large;
+  margin-bottom: 60px;
 }
 
 .results-container > ul {
@@ -78,7 +79,7 @@
   bottom: 0;
   width: 100vw;
   height: 60px;
-  background: #ccc;
+  background: #fff;
   text-align: center;
   position: fixed;
   font-family: 'Mukta', sans-serif;
@@ -86,15 +87,31 @@
 }
 
 .footer > h5 {
-  font-size: x-large;
+  font-size: large;
 }
 
 .footer > .love > .heart {
-  font-size: x-large;
+  font-size: large;
   color: #a83f39;
 }
 
+@media only screen and (max-width: 784px) {
+  .footer {
+    height: 45px;
+  }
+  .results-container, .footer > h5{
+    font-size: medium;
+  }
+}
+
 @media only screen and (max-width: 544px) {
+  .footer {
+    height: 40px;
+  }
+
+  .results-container, .footer > h5 {
+    font-size: small;
+  }
   .search-bar-container {
     position: relative;
     top: 48%;
@@ -112,6 +129,9 @@
 }
 
 @media only screen and (max-width: 320px) {
+  .results-container {
+    font-size: small;
+  }
   .search-bar-container {
     position: relative;
     top: 48%;
