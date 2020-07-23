@@ -21,7 +21,7 @@ const Results = ({ videoList }) => {
       key = 'viewCount';
     } else if (sortKey === 'likes') {
       key = 'likeCount';
-    } 
+    }
     /* else if(sortKey === 'title'){
       setOrderBy('title');
       videos.sort( (a, b) => a.localeCompare(b));
@@ -37,38 +37,43 @@ const Results = ({ videoList }) => {
 
   return (
     <div className='results-container'>
-      <div className='results-container'>
-        <table className='table table-borderless'>
-          <thead className='thead-dark'>
-            <tr>
-              <th scope='col'>#</th>
-              <th scope='col'>Video Thumbnail</th>
-              <th scope='col'>
-                Video Title{/* <span>{orderBy==='title'? order==='desc'?' 🔽':' 🔼':''}</span> */}
-              </th>
-              <th scope='col' onClick={(e) => onSort(e, 'views')}>
-                Views<span>{orderBy==='views'? order==='desc'?' 🔽':' 🔼':''}</span>
-              </th>
-              <th scope='col' onClick={(e) => onSort(e, 'likes')}>
-                Likes<span>{orderBy==='likes'? order==='desc'?' 🔽':' 🔼':''}</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {videoList.map((video, index) => (
-              <ResultsTable
-                key={video.id}
-                url={`https://www.youtube.com/watch?v=${video.id}`}
-                serialNo={index + 1}
-                title={video.snippet.title}
-                thumbnail={video.snippet.thumbnails.default.url}
-                views={abbreviate(video.statistics.viewCount, 1)}
-                likes={abbreviate(video.statistics.likeCount, 1)}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <table className='table table-borderless'>
+        <thead className='thead-dark'>
+          <tr>
+            <th scope='col'>#</th>
+            <th scope='col'>Thumbnail</th>
+            <th scope='col'>
+              Video Title
+              {/* <span>{orderBy==='title'? order==='desc'?'🔽':' 🔼':''}</span> */}
+            </th>
+            <th scope='col' onClick={(e) => onSort(e, 'views')}>
+              Views
+              <span>
+                {orderBy === 'views' ? (order === 'desc' ? '🔽' : '🔼') : ''}
+              </span>
+            </th>
+            <th scope='col' onClick={(e) => onSort(e, 'likes')}>
+              Likes
+              <span>
+                {orderBy === 'likes' ? (order === 'desc' ? '🔽' : '🔼') : ''}
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {videoList.map((video, index) => (
+            <ResultsTable
+              key={video.id}
+              url={`https://www.youtube.com/watch?v=${video.id}`}
+              serialNo={index + 1}
+              title={video.snippet.title}
+              thumbnail={video.snippet.thumbnails.default.url}
+              views={abbreviate(video.statistics.viewCount, 1)}
+              likes={abbreviate(video.statistics.likeCount, 1)}
+            />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
