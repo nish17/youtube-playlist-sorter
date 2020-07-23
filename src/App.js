@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 // import Login from './Login';
 import Dashboard from './Dashboard';
 import Footer from './Footer';
-import * as serviceWorker from './serviceWorker';
 import * as ga from './analytics';
 
 const App = () => {
@@ -29,4 +28,3 @@ const App = () => {
 
 render(<App />, document.getElementById('root'));
 
-serviceWorker.register();
