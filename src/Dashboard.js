@@ -11,14 +11,15 @@ const Dashboard = () => {
   const [videos, setVideos] = useState([]);
   useEffect(() => {
     (async () => {
-      try {
-        const videoIds = await getVideoIdsFromPlayList(playlistID);
-        const videos = await Promise.all(videoIds.map(getVideoDetails));
-        videos.sort(comparatorForLikes);
-        setVideos(videos);
-      } catch (e) {
-        console.log('something went-wrong', JSON.stringify(e));
-      }
+      if (playlistID)
+        try {
+          const videoIds = await getVideoIdsFromPlayList(playlistID);
+          const videos = await Promise.all(videoIds.map(getVideoDetails));
+          videos.sort(comparatorForLikes);
+          setVideos(videos);
+        } catch (e) {
+          console.log('something went-wrong', JSON.stringify(e));
+        }
     })();
   }, [playlistID]);
   return (
