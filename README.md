@@ -23,7 +23,11 @@ So I thought of building one, on my own.
 
 ### Screenshots
 
+#### Desktop View
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/1.png"></a>
+
+#### Mobile View
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/2.png"></a>
 
 ## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
