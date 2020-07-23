@@ -1,18 +1,20 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { getPlaylistId } from './helperFunction';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
+import * as ga from './analytics';
+
 const Search = ({ submitID }) => {
   const [playlistURL, setURL] = useState('');
   const mainRef = useRef(null);
 
   const handleSubmit = (e) => {
-    console.log('Go button clicked!');
     const playlistID = getPlaylistId(playlistURL);
-    console.log('playlistID', playlistID);
+    ga.logEvent('PlaylistID submitted',playlistID);
     return submitID(playlistID);
   };
 
   useEffect(() => {
+    ga.logPageView();
     mainRef.current.focus();
   }, [mainRef]);
 
