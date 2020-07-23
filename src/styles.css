@@ -74,15 +74,19 @@
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  right: 50%;
+  width: 100vw;
+  height: 60px;
+  background: #ccc;
+  text-align: center;
+  position: fixed;
   font-family: 'Mukta', sans-serif;
   color: black;
 }
 
 .footer > h5 {
-  font-size: larger;
+  font-size: x-large;
 }
 
 .footer > .love > .heart {
