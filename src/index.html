@@ -8,7 +8,10 @@
     <meta name="description" content="An app for sorting YouTube Playlists!" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="YouTube Playlist Sorter!" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="YouTube Playlist Sorter!"
+    />
     <link rel="apple-touch-icon" href="./assets/logo192.png" />
     <link rel="stylesheet" href="./styles.css" />
     <link
@@ -26,22 +29,8 @@
   </head>
   <body>
     <div id="root"></div>
+    <button class="add-button">Add to home screen</button>
+    <script src="index.js" ></script>
     <script src="App.js"></script>
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('./serviceWorker.js')
-            .then((reg) => console.log('Success: ', reg.scope))
-            .catch((err) => console.log('Failure: ', err));
-
-          const parsedUrl = new URL(window.location);
-          // searchParams.get() will properly handle decoding the values.
-          console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
-          console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
-          console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
-        });
-      }
-    </script>
   </body>
 </html>
