@@ -2,7 +2,7 @@
   "short_name": "Let's sort it!",
   "name": "YouTube Playlist Sorter",
   "share_target": {
-    "action": "/",
+    "action": "index.html",
     "method": "GET",
     "params": {
       "title": "title",
@@ -27,7 +27,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
