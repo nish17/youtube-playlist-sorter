@@ -5,7 +5,10 @@
     <link rel="icon" href="./assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="YouTube Playlist Sorter!" />
+    <meta name="description" content="An app for sorting YouTube Playlists!" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="YouTube Playlist Sorter!" />
     <link rel="apple-touch-icon" href="./assets/logo192.png" />
     <link rel="stylesheet" href="./styles.css" />
     <link
@@ -31,6 +34,12 @@
             .register('./serviceWorker.js')
             .then((reg) => console.log('Success: ', reg.scope))
             .catch((err) => console.log('Failure: ', err));
+
+          const parsedUrl = new URL(window.location);
+          // searchParams.get() will properly handle decoding the values.
+          console.log('Title shared: ' + parsedUrl.searchParams.get('title'));
+          console.log('Text shared: ' + parsedUrl.searchParams.get('text'));
+          console.log('URL shared: ' + parsedUrl.searchParams.get('url'));
         });
       }
     </script>
