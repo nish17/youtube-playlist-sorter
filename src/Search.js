@@ -8,9 +8,11 @@ const Search = ({ submitID }) => {
   const mainRef = useRef(null);
 
   const handleSubmit = (e) => {
-    const playlistID = getPlaylistId(playlistURL);
-    ga.logEvent('PlaylistID submitted',playlistID);
-    return submitID(playlistID);
+    if(playlistURL){
+      const playlistID = getPlaylistId(playlistURL);
+      ga.logEvent('PlaylistID submitted', playlistID);
+      return submitID(playlistID);
+    }
   };
 
   useEffect(() => {
@@ -18,10 +20,20 @@ const Search = ({ submitID }) => {
     mainRef.current.focus();
   }, [mainRef]);
 
+  useEffect(() => {
+    // const parsedUrl = new URL(document.location);
+    if (window._youtubePlaylistURL) {
+      // const URL = parsedUrl.searchParams.get('text');
+      setURL(window._youtubePlaylistURL);
+      handleSubmit(event);
+    }
+  });
+
   return (
     <div className='search-bar-container'>
       <InputGroup className='mb-3' size='lg'>
         <FormControl
+          id='search-input-1'
           ref={mainRef}
           placeholder='Youtube playlist URL goes here!'
           value={playlistURL}
@@ -29,7 +41,7 @@ const Search = ({ submitID }) => {
           aria-label='Youtube playlist URL goes here!'
           aria-describedby='basic-addon2'
         />
-        <Button variant='secondary' onClick={handleSubmit}>
+        <Button id='go-button' variant='secondary' onClick={handleSubmit}>
           Go!
         </Button>
       </InputGroup>
