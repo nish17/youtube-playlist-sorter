@@ -59,15 +59,15 @@
 
 .results-container {
   position: absolute;
-  width: 100%;
+  /* width: 100%; */
   top: 60%;
   font-family: 'Mukta', sans-serif;
-  font-size: xx-large;
+  font-size: large;
   margin-bottom: 60px;
 }
 
 .results-container > ul {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .table > td {
@@ -94,22 +94,78 @@
   font-size: large;
   color: #a83f39;
 }
-
+.result-sno {
+  width: 10%;
+}
+.result-thumnail {
+  width: 20%;
+}
+.result-title {
+  width: 70%;
+}
+.result-views {
+  width: 10%;
+}
+.result-likes {
+  width: 10%;
+}
+.single-row{
+  margin: 2%;
+}
 @media only screen and (max-width: 784px) {
+  .result-sno {
+    width: 5%;
+  }
+  .result-thumnail {
+    /* width: 15%; */
+    width: auto;
+    height: auto;
+  }
+  .result-title {
+    width: 50%;
+  }
+  .result-views {
+    width: 20%;
+  }
+  .result-likes {
+    width: 20%;
+  }
+  .footer {
+    height: 40px;
+  }
   .footer {
     height: 45px;
   }
-  .results-container, .footer > h5{
+  .results-container,
+  .footer > h5 {
     font-size: medium;
   }
 }
 
 @media only screen and (max-width: 544px) {
+  .result-sno {
+    width: 5%;
+  }
+  .result-thumnail {
+    /* width: 15%; */
+    width: auto;
+    height: auto;
+  }
+  .result-title {
+    width: 50%;
+  }
+  .result-views {
+    width: 15%;
+  }
+  .result-likes {
+    width: 15%;
+  }
   .footer {
     height: 40px;
   }
 
-  .results-container, .footer > h5 {
+  .results-container,
+  .footer > h5 {
     font-size: small;
   }
   .search-bar-container {
@@ -129,8 +185,32 @@
 }
 
 @media only screen and (max-width: 320px) {
-  .results-container {
+  .single-row{
+    margin-bottom: 10px;
+  }
+  .result-sno {
+    width: 0%;
+  }
+  .result-thumnail {
+    width: auto;
+    height: auto;
+  }
+  .result-title {
+    width: auto;
+    height: auto;
+  }
+  .result-views {
+    width: 15%;
+  }
+  .result-likes {
+    width: 15%;
+  }
+  .results-container,
+  .footer > h5 {
     font-size: small;
+  }
+  .result-thumbnail {
+    width: 50%;
   }
   .search-bar-container {
     position: relative;
