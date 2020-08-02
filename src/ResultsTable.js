@@ -11,17 +11,17 @@ const ResultsTable = ({
 }) => {
   return (
     <tr key={id}>
-      <th className='result-sno' scope='row'>
+      <td className='result-sno' scope='row'>
         {serialNo}
-      </th>
-      <td className='result-thumbnail'>
-        <img src={thumbnail} />
       </td>
-      <td className='result-title'>
+      <td className='result-thumbnail' scope='row'>
+      <a href={url}><img src={thumbnail} /></a>
+      </td>
+      <td className='result-title' scope='row'>
         <a href={url} target='_blank'>{title}</a>
       </td>
-      <td className='result-views'>{views}</td>
-      <td className='result-likes'>{likes}</td>
+      <td className='result-views' scope='row'>{views}</td>
+      <td className='result-likes' scope='row'>{likes}</td>
     </tr>
   );
 };
