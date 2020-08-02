@@ -10,18 +10,20 @@ const ResultsTable = ({
   likes,
 }) => {
   return (
-    <tr key={id}>
-      <th className='result-sno' scope='row'>
+    <tr key={id} className='single-row' >
+      <td className='result-sno' scope='row'>
         {serialNo}
-      </th>
-      <td className='result-thumbnail'>
+      </td>
+      <td className='result-thumbnail' scope='row'>
         <img src={thumbnail} />
       </td>
-      <td className='result-title'>
-        <a href={url} target='_blank'>{title}</a>
+      <td className='result-title' scope='row'>
+        <a href={url} target='_blank'>
+          {title}
+        </a>
       </td>
-      <td className='result-views'>{views}</td>
-      <td className='result-likes'>{likes}</td>
+      <td className='result-views' scope='row'>{views}</td>
+      <td className='result-likes' scope='row'>{likes}</td>
     </tr>
   );
 };
