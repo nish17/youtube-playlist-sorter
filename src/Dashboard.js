@@ -9,6 +9,7 @@ import Results from './Results';
 const Dashboard = () => {
   const [playlistID, setPlaylistID] = useState('');
   const [videos, setVideos] = useState([]);
+  const [error, setError] = useState('');
   useEffect(() => {
     (async () => {
       if (playlistID)
@@ -18,14 +19,15 @@ const Dashboard = () => {
           videos.sort(comparatorForLikes);
           setVideos(videos);
         } catch (e) {
-          console.log('something went-wrong', JSON.stringify(e));
+          setError('something went wrong', e);
+          // console.log('something went-wrong', JSON.stringify(e));
         }
     })();
   }, [playlistID]);
   return (
     <div className='dashboard'>
       <Search submitID={setPlaylistID} />
-      {playlistID != '' && videos.length != 0 && <Results videoList={videos} />}
+      {((playlistID != '' && videos.length != 0) && !error) && <Results videoList={videos} />}
     </div>
   );
 };
