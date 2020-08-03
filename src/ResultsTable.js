@@ -15,7 +15,7 @@ const ResultsTable = ({
         {serialNo}
       </td>
       <td className='result-thumbnail' scope='row'>
-      <a href={url}><img src={thumbnail} /></a>
+      <a href={url}><img className="thumbnail-image" src={thumbnail} /></a>
       </td>
       <td className='result-title' scope='row'>
         <a href={url} target='_blank'>{title}</a>
