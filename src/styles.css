@@ -137,20 +137,24 @@
 }
 
 @media only screen and (max-width: 544px) {
+  .thumbnail-image {
+    width: 50px;
+    height: auto;
+  }
   .result-sno {
-    width: 5%;
+    width: 2%;
   }
   .result-thumnail {
-    width: 10%;
+    width: 16%;
   }
   .result-title {
-    width: 30%;
+    width: 62%;
   }
   .result-views {
-    width: 5%;
+    width: 10%;
   }
   .result-likes {
-    width: 5%;
+    width: 10%;
   }
   .footer {
     height: 40px;
