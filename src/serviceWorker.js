@@ -1,11 +1,11 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
-if (workbox) {
-    workbox.routing.registerRoute(
-        /\.(?:html|js|css|png|jpg|jpeg|svg|gif)$/,
-        new workbox.strategies.StaleWhileRevalidate()
-    )
-}
+// if (workbox) {
+//     workbox.routing.registerRoute(
+//         /\.(?:html|js|css|png|jpg|jpeg|svg|gif)$/,
+//         new workbox.strategies.StaleWhileRevalidate()
+//     )
+// }
 
 /* const CACHE_NAME = 'version-1';
 const urlsToCache = ['/','/index.html', '/offline.html', '/styles.css'];
