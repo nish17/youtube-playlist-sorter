@@ -5,9 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf dist && parcel build src/index.html",
+    "remove": "rm -rf dist",
+    "build": "parcel build src/index.html",
     "serve": "http-server dist/",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-sw": "npm run build && workbox injectManifest workbox-config.js",
+    "start-full": "npm run start-sw && http-server dist/"
+
   },
   "repository": {
     "type": "git",
