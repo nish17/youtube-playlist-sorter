@@ -6,8 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "remove": "rm -rf dist",
-    "build": "parcel build src/index.html",
-    "postbuild": "workbox generateSW",
+    "build": "parcel build src/index.html && workbox generateSW",
     "serve": "http-server dist/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start-sw": "npm run build && workbox injectManifest workbox-config.js",
