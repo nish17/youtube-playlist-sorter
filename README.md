@@ -12,7 +12,7 @@ A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
 
 ### 💡 IDEA:
 
-While watching the talks/vidoes of the tech-conferences, have you ever wondered that if you could sort the playlist based on its popularity?
+While watching the talks/videos of the tech-conferences, have you ever wondered that if you could sort the playlist based on its popularity?
 
 So you can easily pickup that talk up and watch it right away.
 
