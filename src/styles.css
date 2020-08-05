@@ -10,6 +10,14 @@
   height: 100vh;
 }
 
+.container {	
+  margin: 0 auto;	
+  width: 75%;	
+  height: 100%;	
+  position: relative;	
+  /* border: 1px solid violet; */	
+}
+
 .main-header {
   position: absolute;
   top: 20%;
