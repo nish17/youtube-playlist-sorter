@@ -10,14 +10,6 @@
   height: 100vh;
 }
 
-.container {
-  margin: 0 auto;
-  width: 75%;
-  height: 100%;
-  position: relative;
-  /* border: 1px solid violet; */
-}
-
 .main-header {
   position: absolute;
   top: 20%;
@@ -29,11 +21,6 @@
   font-size: 100px;
   text-align: center;
   text-shadow: 2px 2px white;
-}
-
-.logo {
-  width: 100px;
-  height: 100px;
 }
 
 .dashboard {
@@ -50,13 +37,6 @@
   width: 90%;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .results-container {
   position: absolute;
   width: 100%;
@@ -70,9 +50,9 @@
   font-size: 30px;
 }
 
-.table > td {
+/* .table > td {
   display: inline;
-}
+} */
 
 .footer {
   position: fixed;
@@ -95,38 +75,7 @@
   color: #a83f39;
 }
 
-.result-sno {
-  width: 10%;
-}
-.result-thumnail {
-  width: 20%;
-}
-.result-title {
-  width: 70%;
-}
-.result-views {
-  width: 10%;
-}
-.result-likes {
-  width: 10%;
-}
-
 @media only screen and (max-width: 784px) {
-  .result-sno {
-    width: 10%;
-  }
-  .result-thumnail {
-    width: 20%;
-  }
-  .result-title {
-    width: 70%;
-  }
-  .result-views {
-    width: 10%;
-  }
-  .result-likes {
-    width: 10%;
-  }
   .footer {
     height: 45px;
   }
@@ -140,21 +89,6 @@
   .thumbnail-image {
     width: 50px;
     height: auto;
-  }
-  .result-sno {
-    width: 2%;
-  }
-  .result-thumnail {
-    width: 16%;
-  }
-  .result-title {
-    width: 62%;
-  }
-  .result-views {
-    width: 10%;
-  }
-  .result-likes {
-    width: 10%;
   }
   .footer {
     height: 40px;
