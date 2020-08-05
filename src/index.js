@@ -1,6 +1,4 @@
-const path = require('path');
-
-const pathsw = path.resolve(__dirname + '/sw.js');
+const pathsw = '/sw.js';
 navigator.serviceWorker
   .register(pathsw)
   .then((registration) => {
