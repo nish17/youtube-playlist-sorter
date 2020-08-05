@@ -1,4 +1,4 @@
-const pathsw = 'src/sw.js';
+const pathsw = 'sw.js';
 navigator.serviceWorker
   .register(pathsw)
   .then((registration) => {
