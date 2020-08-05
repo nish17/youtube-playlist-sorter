@@ -20,6 +20,20 @@ There's no such feature on [Youtube](https://youtube.com/) as of now.
 
 So I thought of building one, on my own.
 
+### 🆕 What's new ?
+Now no need to copy and paste youtube playlist URLs. `Just Share it and Sort it!`
+
+It's a Progressive Web App ([PWA](https://web.dev/progressive-web-apps/)) which implements [Share Target API](https://web.dev/web-share-target/).
+
+[Share Target API](https://web.dev/web-share-target/) helps in receving data from other application when the share button is clicked.
+
+#### For example: 
+While using YouTube mobile app, find the playlist you want to sort, click share 📤 and search for YouTube Playlist Sorter from the app list.
+
+That's all!
+
+It will automatically fill up the playlist URL and load the results for you!😎
+
 
 ### Demo
 
@@ -40,6 +54,7 @@ So I thought of building one, on my own.
 - [Node.js](https://nodejs.org/)
 - [React.js](https://reactjs.org/)
 - [Netlify](https://www.netlify.com/)
+- [Workbox](https://developers.google.com/web/tools/workbox)
 
 ## 🎓 License
 
