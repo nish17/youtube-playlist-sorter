@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 
-async function getVideoIdsFromPlayList(playlistId, pageToken) {
+export async function getVideoIdsFromPlayList(playlistId, pageToken) {
   const { data } = await axios.get(`${BASE_URL}/playlistItems`, {
     params: {
       maxResults: '50', // this is the max limit specified in the docs
@@ -25,7 +25,7 @@ async function getVideoIdsFromPlayList(playlistId, pageToken) {
   }
   return videoIds;
 }
-async function getVideoDetails(videoId) {
+export async function getVideoDetails(videoId) {
   const { data } = await axios.get(`${BASE_URL}/videos`, {
     params: {
       id: videoId,
@@ -35,15 +35,3 @@ async function getVideoDetails(videoId) {
   });
   return data.items[0];
 }
-// (async () => {
-//   const videoIds = await getVideoIdsFromPlayList('PLC3y8-rFHvwisvxhZ135pogtX7_Oe3Q3A');
-//   const videos = await Promise.all(videoIds.map(getVideoDetails));
-//   console.log(videoIds);
-//   console.log('-------------');
-//   console.log(videos);
-// }) ();
-
-module.exports = {
-  getVideoIdsFromPlayList,
-  getVideoDetails,
-};
