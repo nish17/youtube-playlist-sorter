@@ -30,7 +30,7 @@
   <body>
     <div id="root"></div>
     <script>
-      const sw = 'sw.js';
+      const sw = './sw.js';
 
       navigator.serviceWorker
         .register(sw)
@@ -55,7 +55,7 @@
           };
         })
         .catch((error) => {
-          console.error('Error during service worker registration:', error);
+          console.error('==>Error during service worker registration:', error);
         });
       window.addEventListener('DOMContentLoaded', () => {
         const parsedUrl = new URL(window.location);
