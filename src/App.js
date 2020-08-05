@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import { render } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-// import Login from './Login';
 import Dashboard from './Dashboard';
 import Footer from './Footer';
 import * as ga from './analytics';
