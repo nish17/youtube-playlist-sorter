@@ -10,12 +10,12 @@
   height: 100vh;
 }
 
-.container {	
-  margin: 0 auto;	
-  width: 75%;	
-  height: 100%;	
-  position: relative;	
-  /* border: 1px solid violet; */	
+.container {
+  margin: 0 auto;
+  width: 75%;
+  height: 100%;
+  position: relative;
+  /* border: 1px solid violet; */
 }
 
 .main-header {
@@ -58,10 +58,6 @@
   font-size: 30px;
 }
 
-/* .table > td {
-  display: inline;
-} */
-
 .footer {
   position: fixed;
   bottom: 0;
@@ -81,6 +77,32 @@
 .footer > .love > .heart {
   font-size: large;
   color: #a83f39;
+}
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width: 500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
 }
 
 @media only screen and (max-width: 784px) {
