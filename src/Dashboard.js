@@ -22,9 +22,9 @@ const Dashboard = () => {
           const videoIds = await getVideoIdsFromPlayList(playlistID);
           const videos = await Promise.all(videoIds.map(getVideoDetails));
           setIsLoading(false);
-          setError({...error,doesExist: false})
+          setError({ ...error, doesExist: false });
           videos.sort(comparatorForLikes);
-          setVideos(videos);
+          setVideos(videos.filter((v) => (v ? v : null)));
         } catch (e) {
           setIsLoading(false);
           setError({ doesExist: true, type: 'PLAYLIST_URL_ERROR' });
