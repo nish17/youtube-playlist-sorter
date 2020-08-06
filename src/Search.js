@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { getPlaylistId } from './helperFunction';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import * as ga from './analytics';
@@ -7,13 +7,16 @@ const Search = ({ submitID }) => {
   const [playlistURL, setURL] = useState('');
   const mainRef = useRef(null);
 
-  const handleSubmit = (e) => {
-    if(playlistURL){
-      const playlistID = getPlaylistId(playlistURL);
-      ga.logEvent('PlaylistID submitted', playlistID);
-      return submitID(playlistID);
-    }
-  };
+  const handleSubmit = useCallback(
+    (e) => {
+      if (playlistURL) {
+        const playlistID = getPlaylistId(playlistURL);
+        ga.logEvent('PlaylistID submitted', playlistID);
+        return submitID(playlistID);
+      }
+    },
+    [playlistURL, submitID]
+  );
 
   useEffect(() => {
     ga.logPageView();
@@ -21,13 +24,11 @@ const Search = ({ submitID }) => {
   }, [mainRef]);
 
   useEffect(() => {
-    // const parsedUrl = new URL(document.location);
     if (window._youtubePlaylistURL) {
-      // const URL = parsedUrl.searchParams.get('text');
       setURL(window._youtubePlaylistURL);
-      handleSubmit(event);
+      handleSubmit();
     }
-  });
+  }, [handleSubmit]);
 
   return (
     <div className='search-bar-container'>
