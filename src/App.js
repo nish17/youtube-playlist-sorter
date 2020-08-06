@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { render } from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -22,10 +22,9 @@ const App = () => {
         </div>
         <Dashboard />
       </Container>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
 
 render(<App />, document.getElementById('root'));
-
