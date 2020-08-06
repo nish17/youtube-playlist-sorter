@@ -68,8 +68,16 @@ const Results = ({ videoList }) => {
               serialNo={index + 1}
               title={video.snippet.title}
               thumbnail={video.snippet.thumbnails.default.url}
-              views={abbreviate(video.statistics.viewCount, 1)}
-              likes={abbreviate(video.statistics.likeCount, 1)}
+              views={
+                video.statistics.viewCount
+                  ? abbreviate(video.statistics.viewCount, 1)
+                  : 'Disabled'
+              }
+              likes={
+                video.statistics.likeCount
+                  ? abbreviate(video.statistics.likeCount, 1)
+                  : 'Disabled'
+              }
             />
           ))}
         </tbody>
