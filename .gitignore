@@ -10,3 +10,4 @@ coverage/
 playground.js
 
 *.map
+playlistIDError.json
