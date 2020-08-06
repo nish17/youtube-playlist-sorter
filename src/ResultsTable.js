@@ -11,17 +11,24 @@ const ResultsTable = ({
 }) => {
   return (
     <tr key={id}>
-      <td className='result-sno' scope='row'>
-        {serialNo}
+      <td className='result-sno'>{serialNo}</td>
+      <td className='result-thumbnail'>
+        <a href={url}>
+          <img
+            className='thumbnail-image'
+            src={thumbnail}
+            alt='Youtube Video Thumbnail'
+            target='_blank'
+          />
+        </a>
       </td>
-      <td className='result-thumbnail' scope='row'>
-      <a href={url}><img className="thumbnail-image" src={thumbnail} /></a>
+      <td className='result-title'>
+        <a href={url} rel='noopener noreferrer' target='_blank'>
+          {title}
+        </a>
       </td>
-      <td className='result-title' scope='row'>
-        <a href={url} target='_blank'>{title}</a>
-      </td>
-      <td className='result-views' scope='row'>{views}</td>
-      <td className='result-likes' scope='row'>{likes}</td>
+      <td className='result-views'>{views}</td>
+      <td className='result-likes'>{likes}</td>
     </tr>
   );
 };
