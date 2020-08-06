@@ -21,4 +21,8 @@ function getPlaylistId(playlistUrl) {
   return parsedUrl.query.list;
 }
 
-module.exports = { comparatorForViews, comparatorForLikes, getPlaylistId };
+function generateRandomNumber(){
+  return Math.floor((Math.random() * 10) + 1);
+}
+
+module.exports = { comparatorForViews, comparatorForLikes, getPlaylistId, generateRandomNumber };
