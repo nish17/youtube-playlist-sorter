@@ -27,8 +27,8 @@ const ResultsTable = ({
           {title}
         </a>
       </td>
-      <td className='result-views'>{views}</td>
-      <td className='result-likes'>{likes}</td>
+      <td className='result-views'>{isNaN(views) ? 'Disabled' : views}</td>
+      <td className='result-likes'>{isNaN(likes) ? 'Disabled' : views}</td>
     </tr>
   );
 };
