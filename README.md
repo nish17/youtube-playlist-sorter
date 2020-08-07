@@ -41,8 +41,18 @@ That's all!
 It will automatically fill up the playlist URL and load the results for you!😎
 
 ### Demo
+#### Desktop Demo
 
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo.gif"></a>
+
+#### PWA Demo
+Please make sure that you've added the app to your Home Screen. 
+Like this:
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/a2hs.jpg" height=500></a>
+
+Once added it to the `home screen`, Do as follows:
+
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo2.gif" height=500></a>
 
 ### Screenshots
 
@@ -52,7 +62,7 @@ It will automatically fill up the playlist URL and load the results for you!😎
 
 #### Mobile View
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/2.png"></a>
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/3.jpg" height=500></a>
 
 ## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
