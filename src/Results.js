@@ -1,87 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import abbreviate from 'number-abbreviate';
 import ResultsTable from './ResultsTable';
 
 const Results = ({ videoList }) => {
-  // const [videos, setVideos] = useState(videoList);
-  const [order, setOrder] = React.useState('desc');
-  const [orderBy, setOrderBy] = React.useState('views');
+  const [videos, setVideos] = useState([]);
 
-  const handleRequestSort = (event, property) => {
-    const isAsc = orderBy === property && order === 'asc';
-    setOrder(isAsc ? 'desc' : 'asc');
-    setOrderBy(property);
-  };
-
-  function onSort(event, sortKey) {
-    let key = '';
-    // const data = this.state.data;
-    handleRequestSort(event, sortKey);
-    if (sortKey === 'views') {
-      key = 'viewCount';
-    } else if (sortKey === 'likes') {
-      key = 'likeCount';
-    }
-    /* else if(sortKey === 'title'){
-      setOrderBy('title');
-      videos.sort( (a, b) => a.localeCompare(b));
-      return; 
-    } */
-
-    videoList.sort((a, b) => {
-      if (order === 'asc') return a['statistics'][key] - b['statistics'][key];
-      else return b['statistics'][key] - a['statistics'][key];
+  function mapData() {
+    const videosData = [];
+    videoList.map((video, index) => {
+      return videosData.push({
+        key: video.id,
+        sno: index + 1,
+        thumbnail: video.snippet.thumbnails.default.url,
+        url: `https://www.youtube.com/watch?v=${video.id}`,
+        title: video.snippet.title,
+        views: video.statistics.viewCount
+          ? abbreviate(video.statistics.viewCount, 1)
+          : 'Disabled',
+        likes: video.statistics.likeCount
+          ? abbreviate(video.statistics.likeCount, 1)
+          : 'Disabled',
+      });
     });
-    // setVideos(videos);
+    setVideos(videosData);
   }
+
+  useEffect(() => {
+    mapData();
+  }, [videoList]);
+
+  const columns = React.useMemo(
+    () => [
+      {
+        Header: '#',
+        accessor: 'sno',
+      },
+      {
+        Header: 'Video Thumbnail',
+        Cell: (row) => {
+          return (
+            <div>
+              <a href={row.row.original.url} target='_blank'>
+                <img
+                  className='thumbnail-image'
+                  src={row.row.original.thumbnail}
+                />
+              </a>
+            </div>
+          );
+        },
+        accessor: 'thumbnail',
+      },
+      {
+        Header: 'Video Title',
+        Cell: (row) => {
+          return (
+            <div>
+              <a href={row.row.original.url} target='_blank'>
+                <div>{row.row.original.title}</div>
+              </a>
+            </div>
+          );
+        },
+        accessor: 'title',
+      },
+      {
+        Header: 'Views',
+        accessor: 'views',
+      },
+      {
+        Header: 'Likes',
+        accessor: 'likes',
+      },
+    ],
+    []
+  );
 
   return (
     <div className='results-container'>
-      <table className='table table-borderless'>
-        <thead className='thead-dark'>
-          <tr>
-            <th scope='col'>#</th>
-            <th scope='col'>Thumbnail</th>
-            <th scope='col'>
-              Video Title
-              {/* <span>{orderBy==='title'? order==='desc'?'🔽':' 🔼':''}</span> */}
-            </th>
-            <th scope='col' onClick={(e) => onSort(e, 'views')}>
-              Views
-              <span>
-                {orderBy === 'views' ? (order === 'desc' ? '🔽' : '🔼') : ''}
-              </span>
-            </th>
-            <th scope='col' onClick={(e) => onSort(e, 'likes')}>
-              Likes
-              <span>
-                {orderBy === 'likes' ? (order === 'desc' ? '🔽' : '🔼') : ''}
-              </span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {videoList.map((video, index) => (
-            <ResultsTable
-              key={video.id}
-              url={`https://www.youtube.com/watch?v=${video.id}`}
-              serialNo={index + 1}
-              title={video.snippet.title}
-              thumbnail={video.snippet.thumbnails.default.url}
-              views={
-                video.statistics.viewCount
-                  ? abbreviate(video.statistics.viewCount, 1)
-                  : 'Disabled'
-              }
-              likes={
-                video.statistics.likeCount
-                  ? abbreviate(video.statistics.likeCount, 1)
-                  : 'Disabled'
-              }
-            />
-          ))}
-        </tbody>
-      </table>
+      {videos.length > 0 && <ResultsTable columns={columns} data={videos} />}
+      {videos.length === 0 && <div>No videos received!</div>}
     </div>
   );
 };

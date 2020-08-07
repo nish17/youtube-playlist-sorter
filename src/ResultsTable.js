@@ -1,35 +1,50 @@
 import React from 'react';
+import { useTable, useSortBy } from 'react-table';
 
-const ResultsTable = ({
-  id,
-  url,
-  thumbnail,
-  serialNo,
-  title,
-  views,
-  likes,
-}) => {
+const ResultsTable = ({ columns, data }) => {
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = useTable(
+    {
+      columns,
+      data,
+    },
+    useSortBy
+  );
+
   return (
-    <tr key={id}>
-      <td className='result-sno'>{serialNo}</td>
-      <td className='result-thumbnail'>
-        <a href={url}>
-          <img
-            className='thumbnail-image'
-            src={thumbnail}
-            alt='Youtube Video Thumbnail'
-            target='_blank'
-          />
-        </a>
-      </td>
-      <td className='result-title'>
-        <a href={url} rel='noopener noreferrer' target='_blank'>
-          {title}
-        </a>
-      </td>
-      <td className='result-views'>{views}</td>
-      <td className='result-likes'>{likes}</td>
-    </tr>
+    <table className='table table-hover' {...getTableProps()}>
+      <thead className='thead-dark' >
+        {headerGroups.map((headerGroup) => (
+          <tr {...headerGroup.getHeaderGroupProps()}>
+            {headerGroup.headers.map((column) => (
+              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+                {column.render('Header')}
+                <span>
+                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+                </span>
+              </th>
+            ))}
+          </tr>
+        ))}
+      </thead>
+      <tbody {...getTableBodyProps()}>
+        {rows.map((row, i) => {
+          prepareRow(row);
+          return (
+            <tr {...row.getRowProps()}>
+              {row.cells.map((cell) => {
+                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
+              })}
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
   );
 };
 
