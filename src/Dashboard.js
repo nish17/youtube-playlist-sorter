@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 import { getVideoIdsFromPlayList, getVideoDetails } from './api';
-import { comparatorForLikes } from './helperFunction';
 
 import Search from './Search';
 import Results from './Results';
@@ -21,10 +20,9 @@ const Dashboard = () => {
           setIsLoading(true);
           const videoIds = await getVideoIdsFromPlayList(playlistID);
           const videos = await Promise.all(videoIds.map(getVideoDetails));
+          setVideos(videos.filter((v) => (v ? v : null)));
           setIsLoading(false);
           setError({ ...error, doesExist: false });
-          videos.sort(comparatorForLikes);
-          setVideos(videos.filter((v) => (v ? v : null)));
         } catch (e) {
           setIsLoading(false);
           setError({ doesExist: true, type: 'PLAYLIST_URL_ERROR' });
