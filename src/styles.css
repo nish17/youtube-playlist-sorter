@@ -1,8 +1,12 @@
+:root {
+  --secondary-color: #fff ; 
+}
+
 .main-section {
-  background: -webkit-linear-gradient(180deg, #ff8a80  50%, #fff 50%);
-  background: -o-linear-gradient(180deg, #ff8a80   50%, #fff 50%);
-  background: -moz-linear-gradient(180deg, #ff8a80   50%, #fff 50%);
-  background: linear-gradient(180deg, #ff8a80  50%, #fff 50%);
+  background: -webkit-linear-gradient(180deg, #ff8a80  50%, var(--secondary-color) 50%);
+  background: -o-linear-gradient(180deg, #ff8a80   50%, var(--secondary-color) 50%);
+  background: -moz-linear-gradient(180deg, #ff8a80   50%, var(--secondary-color) 50%);
+  background: linear-gradient(180deg, #ff8a80  50%, var(--secondary-color) 50%);
   top: 0;
   left: 0;
   right: 0;
@@ -63,7 +67,7 @@
   bottom: 0;
   width: 100vw;
   height: 60px;
-  background: #fff;
+  background: var(--secondary-color);
   text-align: center;
   font-family: 'Mukta', sans-serif;
   color: black;
