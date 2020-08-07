@@ -14,12 +14,8 @@ const Results = ({ videoList }) => {
         thumbnail: video.snippet.thumbnails.default.url,
         url: `https://www.youtube.com/watch?v=${video.id}`,
         title: video.snippet.title,
-        views: video.statistics.viewCount
-          ? abbreviate(video.statistics.viewCount, 1)
-          : 'Disabled',
+        views: video.statistics.viewCount,
         likes: video.statistics.likeCount
-          ? abbreviate(video.statistics.likeCount, 1)
-          : 'Disabled',
       });
     });
     setVideos(videosData);

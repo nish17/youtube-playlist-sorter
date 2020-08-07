@@ -1,4 +1,5 @@
 import React from 'react';
+import abbreviate from 'number-abbreviate';
 import { useTable, useSortBy } from 'react-table';
 
 const ResultsTable = ({ columns, data }) => {
@@ -18,7 +19,7 @@ const ResultsTable = ({ columns, data }) => {
 
   return (
     <table className='table table-hover' {...getTableProps()}>
-      <thead className='thead-dark' >
+      <thead className='thead-dark'>
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
@@ -38,6 +39,12 @@ const ResultsTable = ({ columns, data }) => {
           return (
             <tr {...row.getRowProps()}>
               {row.cells.map((cell) => {
+                if (cell.column.id === 'views' || cell.column.id === 'likes') {
+                  let value = null;
+                  value = abbreviate(cell.value, 1);
+                  if (!value) value = 'Disabled';
+                  return <td {...cell.getCellProps()}>{value}</td>;
+                }
                 return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
               })}
             </tr>
