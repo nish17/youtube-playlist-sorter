@@ -16,6 +16,7 @@ const GithubCorner = () => {
       href='https://github.com/nish17/youtube-playlist-sorter'
       className='github-corner'
       aria-label='View source on GitHub'
+      target='_blank'
     >
       <svg
         width='80'
