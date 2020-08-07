@@ -1,3 +1,4 @@
+import * as ga from './analytics';
 const pathsw = '/sw.js';
 navigator.serviceWorker
   .register(pathsw)
@@ -29,17 +30,23 @@ window.addEventListener('DOMContentLoaded', () => {
   window._youtubePlaylistURL = parsedUrl.searchParams.get('text');
 });
 
-/* if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('sw.js')
-      .then((reg) => console.log('Success: ', reg.scope))
-      .catch((err) => console.log('Failure: ', err));
-  });
-}
+window.addEventListener('beforeinstallprompt', (e) => {
+  ga.logEvent(
+    'BeforeInstallPromptTriggered at ',
+    new Date().toLocaleDateString(),
+    new Date().toLocaleTimeString()
+  );
 
-window.addEventListener('DOMContentLoaded', () => {
-  const parsedUrl = new URL(window.location);
-  window._youtubePlaylistURL = parsedUrl.searchParams.get('text');
+  e.userChoice.then((choiceResult) => {
+    ga.logEvent('userchoice: ', choiceResult);
+  });
 });
- */
+
+window.addEventListener('appinstalled', (e) => {
+  ga.logEvent(
+    'App Installed at',
+    new Date().toLocaleDateString(),
+    new Date().toLocaleTimeString()
+  );
+});
+
