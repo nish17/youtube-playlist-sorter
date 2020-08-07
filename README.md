@@ -48,6 +48,7 @@ It will automatically fill up the playlist URL and load the results for you!😎
 #### PWA Demo
 Please make sure that you've added the app to your Home Screen. 
 Like this:
+
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/a2hs.jpg" height=500></a>
 
 Once added it to the `home screen`, Do as follows:
