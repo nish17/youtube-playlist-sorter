@@ -1,6 +1,6 @@
 <p align="center">
 <img src='./src/assets/logo192.png' align='left'/>
-<h1 align="center"> YouTube Playlist Sorter v2 </h1>
+<h1 align="center"> <a href="https://youtuber-sorter.snimesh.com" target="_blank"> YouTube Playlist Sorter v2 </a> </h1>
 <span align='center'>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
@@ -10,11 +10,12 @@
 </span>
 </p>
 <br/>
+<h3 align='center'>Give it a try once: <a href="https://youtuber-sorter.snimesh.com" target="_blank">https://youtuber-sorter.snimesh.com</a> </h3> 
 <hr>
 
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
-### 🤔 What is YouTube Playlist Sorter?
+### 🤔 What is [YouTube Playlist Sorter](https://youtuber-sorter.snimesh.com)?
 
 A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
 
@@ -79,6 +80,7 @@ It will automatically fill up the playlist URL and load the results for you!😎
 - [React.js](https://reactjs.org/)
 - [Netlify](https://www.netlify.com/)
 - [Workbox](https://developers.google.com/web/tools/workbox)
+- [YouTube Data API v3](https://developers.google.com/youtube/v3)
 
 ## 🎓 License
 
