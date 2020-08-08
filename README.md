@@ -12,6 +12,7 @@
 
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
+### 🤔 What is YouTube Playlist Sorter?
 A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
 
 ### 💡 IDEA:
@@ -41,27 +42,28 @@ That's all!
 It will automatically fill up the playlist URL and load the results for you!😎
 
 ### Demo
-#### Desktop Demo
+  - Desktop Demo
 
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo.gif"></a>
 
-#### PWA Demo
-Please make sure that you've added the app to your Home Screen. 
-Like this:
+  - PWA Demo
+      
+    Please make sure that you've added the app to your Home Screen. 
+    Like this:
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/a2hs.jpg" height=500></a>
+    <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/a2hs.jpg" height=500></a>
 
-Once added it to the `home screen`, Do as follows:
+    Once added it to the `home screen`, Do as follows:
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/PWAdemo.gif" height=500></a>
+    <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/PWAdemo.gif" height=500></a>
 
 ### Screenshots
 
-#### Desktop View
+  - Desktop View
 
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/1.png"></a>
 
-#### Mobile View
+  - Mobile View
 
 <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/3.jpg" height=500></a>
 
