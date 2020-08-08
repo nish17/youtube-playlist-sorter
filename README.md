@@ -3,9 +3,9 @@
 <h1 align="center"> YouTube Playlist Sorter v2 </h1>
 <span align='center'>
 
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
-  [![Twitter Follow](https://img.shields.io/twitter/follow/jaydp17.svg?style=social)](https://twitter.com/jaydp17)
-  [![Twitter Follow](https://img.shields.io/twitter/follow/NimeshS17.svg?style=social)](https://twitter.com/NimeshS17)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
+[![Twitter Follow](https://img.shields.io/twitter/follow/jaydp17.svg?style=social)](https://twitter.com/jaydp17)
+[![Twitter Follow](https://img.shields.io/twitter/follow/NimeshS17.svg?style=social)](https://twitter.com/NimeshS17)
 
 </span>
 </p>
@@ -15,6 +15,7 @@
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
 ### 🤔 What is YouTube Playlist Sorter?
+
 A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
 
 ### 💡 IDEA:
@@ -35,7 +36,7 @@ It's a Progressive Web App ([PWA](https://web.dev/progressive-web-apps/)) which 
 
 [Share Target API](https://web.dev/web-share-target/) helps in receving data from other application when the share button is clicked.
 
-#### For example:
+### For example:
 
 While using YouTube mobile app, find the playlist you want to sort, click share 📤 and search for YouTube Playlist Sorter from the app list.
 
@@ -44,30 +45,31 @@ That's all!
 It will automatically fill up the playlist URL and load the results for you!😎
 
 ### Demo
-  - Desktop Demo
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo.gif"></a>
+- Desktop Demo
 
-  - PWA Demo
-      
-    Please make sure that you've added the app to your Home Screen. 
-    Like this:
+<a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/demo.gif"></a>
 
-    <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/a2hs.jpg" height=500></a>
+- PWA Demo
 
-    Once added it to the `home screen`, Do as follows:
+  Please make sure that you've added the app to your Home Screen.
+  Like this:
 
-    <a href="https://lets-sort-it.netlify.app"><img src="./src/assets/PWAdemo.gif" height=500></a>
+  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/a2hs.jpg" height=500></a>
+
+  Once added it to the `home screen`, Do as follows:
+
+  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/PWAdemo.gif" height=500></a>
 
 ### Screenshots
 
-  - Desktop View
+- Desktop View
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/1.png"></a>
+  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/1.png"></a>
 
-  - Mobile View
+- Mobile View
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/3.jpg" height=500></a>
+  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/3.jpg" height=500></a>
 
 ## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
