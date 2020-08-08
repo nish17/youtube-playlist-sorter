@@ -1,6 +1,6 @@
 <p align="center">
 <img src='./src/assets/logo192.png' align='left'/>
-<h1 align="center"> <a href="https://youtuber-sorter.snimesh.com" target="_blank"> YouTube Playlist Sorter v2 </a> </h1>
+<h1 align="center"> <a href="https://youtube-sorter.snimesh.com" target="_blank"> YouTube Playlist Sorter v2 </a> </h1>
 <span align='center'>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
@@ -9,13 +9,13 @@
 
 </span>
 </p>
-<h3 align='center'>Give it a try once: <a href="https://youtuber-sorter.snimesh.com" target="_blank">https://youtuber-sorter.snimesh.com</a> </h3> 
+<h3 align='center'>Give it a try once: <a href="https://youtube-sorter.snimesh.com" target="_blank">https://youtube-sorter.snimesh.com</a> </h3> 
 <br/>
 <hr>
 
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
 
-### 🤔 What is [YouTube Playlist Sorter](https://youtuber-sorter.snimesh.com)?
+### 🤔 What is [YouTube Playlist Sorter](https://youtube-sorter.snimesh.com)?
 
 A Web-app which sorts ↕️ a public playlist based on its popularity 🔥
 
@@ -49,28 +49,28 @@ It will automatically fill up the playlist URL and load the results for you!😎
 
 - Desktop Demo
 
-<a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/demo.gif"></a>
+<a href="https://youtube-sorter.snimesh.com"><img src="./src/assets/demo.gif"></a>
 
 - PWA Demo
 
   Please make sure that you've added the app to your Home Screen.
   Like this:
 
-  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/a2hs.jpg" height=500></a>
+  <a href="https://youtube-sorter.snimesh.com"><img src="./src/assets/a2hs.jpg" height=500></a>
 
   Once added it to the `home screen`, Do as follows:
 
-  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/PWAdemo.gif" height=500></a>
+  <a href="https://youtube-sorter.snimesh.com"><img src="./src/assets/PWAdemo.gif" height=500></a>
 
 ### Screenshots
 
 - Desktop View
 
-  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/1.png"></a>
+  <a href="https://youtube-sorter.snimesh.com"><img src="./src/assets/1.png"></a>
 
 - Mobile View
 
-  <a href="https://youtuber-sorter.snimesh.com"><img src="./src/assets/3.jpg" height=500></a>
+  <a href="https://youtube-sorter.snimesh.com"><img src="./src/assets/3.jpg" height=500></a>
 
 ## Special Thanks to [Jaydeep Solanki - Brain behind the idea](https://jaydp.com)
 
