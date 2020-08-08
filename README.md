@@ -9,8 +9,8 @@
 
 </span>
 </p>
-<br/>
 <h3 align='center'>Give it a try once: <a href="https://youtuber-sorter.snimesh.com" target="_blank">https://youtuber-sorter.snimesh.com</a> </h3> 
+<br/>
 <hr>
 
 ## Inspired from [jaydp17/youtube-playlist-sorter](https://github.com/jaydp17/youtube-playlist-sorter)
