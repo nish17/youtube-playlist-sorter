@@ -53,7 +53,7 @@ Like this:
 
 Once added it to the `home screen`, Do as follows:
 
-<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/demo2.gif" height=500></a>
+<a href="https://lets-sort-it.netlify.app"><img src="./src/assets/PWAdemo.gif" height=500></a>
 
 ### Screenshots
 
