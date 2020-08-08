@@ -8,6 +8,7 @@ const GithubCorner = () => {
     top: 0,
     border: 0,
     right: 0,
+    zIndex: 1
   };
 
   const pathStyle = {transformOrigin: `130px 106px`}
