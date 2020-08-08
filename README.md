@@ -1,11 +1,13 @@
 <p align="center">
 <img src='./src/assets/logo192.png' align='left'/>
 <h1 align="center"> YouTube Playlist Sorter v2 </h1>
+<span align='center'>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
-[![Twitter Follow](https://img.shields.io/twitter/follow/jaydp17.svg?style=social)](https://twitter.com/jaydp17)
-[![Twitter Follow](https://img.shields.io/twitter/follow/NimeshS17.svg?style=social)](https://twitter.com/NimeshS17)
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/c9085e11-3964-426a-b045-fba9337ee36b/deploy-status)](https://app.netlify.com/sites/nifty-tesla-bcd396/deploys)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/jaydp17.svg?style=social)](https://twitter.com/jaydp17)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/NimeshS17.svg?style=social)](https://twitter.com/NimeshS17)
 
+</span>
 </p>
 <br/>
 <hr>
